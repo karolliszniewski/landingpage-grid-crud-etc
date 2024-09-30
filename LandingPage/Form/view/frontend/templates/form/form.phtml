@@ -1,0 +1,33 @@
+<div style="width:100%;display:flex;justify-content:center;align-items:center;" class="account_container-inner">
+    <form style="width:50%;" action="<?= $block->getUrl('landingpage/index/post') ?>" class="form" method="post" id="user-info-form">
+        <?= $block->getBlockHtml('formkey') ?>
+        <fieldset class="fieldset">
+            <div class="field">
+                <label class="label label--required" for="name"><span><?= __("Name")?></span></label>
+                <input name="name" class="input" required id="name" type="text" title="name" value="<?=$block->getCustomerName()?>" disabled require>
+            </div>      
+             
+            <div class="field">
+            <label class="label label--required" for="username"><span><?= __("Email")?></span></label>
+                <input name="email" class="input" required id="email" type="email" title="Email" value="<?=$block->getCustomerEmail()?>" disabled>
+            </div>
+            <label class="label" for="username"><span><?= __("Comment")?></span></label>
+            <div class="field">
+            
+                <textarea name="comment" class="input" id="comment" title="Comment" > </textarea>
+            </div>
+            <!-- Hidden fields to send username and email -->
+            <input type="hidden" name="name" value="<?=$block->getCustomerName()?>">
+            <input type="hidden" name="email" value="<?=$block->getCustomerEmail()?>">
+
+            <div class="actions">
+                <button type="button" class="action-primary" name="add-to-cart">
+                    <span><?= __("Add to Cart") ?></span>    
+                </button>
+                <button class="action-secondary" type="submit">
+                    <span><?= __("Read More") ?></span>
+                </button>
+            </div>
+        </fieldset>
+    </form>
+</div>

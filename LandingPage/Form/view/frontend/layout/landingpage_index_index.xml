@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="LandingPage\Form\Block\Index" name="form_block" template="LandingPage_Form::content/content.phtml">
+                <block class="LandingPage\Form\Block\Index" name="form_block_child_disabled" template="LandingPage_Form::no-form/disabled.phtml"/>
+                <block class="LandingPage\Form\Block\Index" name="form_block_child_session" template="LandingPage_Form::no-form/session.phtml"/>
+                <block class="LandingPage\Form\Block\Index" name="form_block_child_form" template="LandingPage_Form::form/form.phtml"/>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
